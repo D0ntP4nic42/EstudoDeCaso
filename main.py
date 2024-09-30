@@ -36,3 +36,38 @@ for i in range (0, 13):
 
 dataFrame = pd.DataFrame({'K1': listK1, 'K2': listK2, 'K': listK, 'Resultado': listResult})
 print(dataFrame)
+
+print("=====================================")
+print("\nAplicando em estradas rugosas\n") 
+
+def getResultOmegaP(omegaP):
+    return 2 * math.sqrt((1 -omegaP**2)**2 + 4 * (fatorDeAmortecimento**2) * (omegaP**2)) - 1
+
+fatorDeAmortecimento = (1 * 10**7) /( 2 * math.sqrt((listK[-1]) * (1.2 * 10**6)))
+print(f'Fator de Amortecimento (C / Cc): {fatorDeAmortecimento}\n')
+omegaP1 = 0
+omegaP2 = 1
+
+listOmegaP1 = []
+listOmegaP2 = []
+listOmegaP = []
+listResultOmegaP = []
+
+for i in range(0, 20):
+    omegaP = (omegaP1 + omegaP2)/2
+    result = getResultOmegaP(omegaP)
+    listOmegaP1.append(omegaP1)
+    listOmegaP2.append(omegaP2)
+    listOmegaP.append(omegaP)
+    listResultOmegaP.append(result)
+
+    if result < 0:
+        omegaP2 = omegaP
+    elif result > 0:
+        omegaP1 = omegaP
+    else:
+        print("Resultado encontrado!")
+        break
+
+dataFrame = pd.DataFrame({'Omega/P1': listOmegaP1, 'Omega/P2': listOmegaP2, 'Omega/P': listOmegaP, 'Resultado': listResultOmegaP})
+print(dataFrame)
