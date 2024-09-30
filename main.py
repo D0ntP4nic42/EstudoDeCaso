@@ -34,9 +34,6 @@ for i in range (0, 13):
         print("Resultado encontrado!")
         break
 
-print(2* math.sqrt(k/m))
-print(c)
-
 dataFrame = pd.DataFrame({'K1': listK1, 'K2': listK2, 'K': listK, 'Resultado': listResult})
 print(dataFrame)
 
@@ -74,3 +71,4 @@ for i in range(0, 20):
 
 dataFrame = pd.DataFrame({'Omega/P1': listOmegaP1, 'Omega/P2': listOmegaP2, 'Omega/P': listOmegaP, 'Resultado': listResultOmegaP})
 print(dataFrame)
+
