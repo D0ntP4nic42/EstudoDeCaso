@@ -10,7 +10,8 @@ $$
 x(t) = cos{(0.05\mu)} + \frac{\lambda}{\mu} \cdot sen{(0.05\mu)}
 $$
 
-Abrindo essa equação com as fórmulas: 
+Abrindo essa equação com as fórmulas:  
+
 $$\mu = \frac{\sqrt{(|c^2 - 4mk|)}}{2m}$$
 
 e
@@ -23,7 +24,7 @@ $$
 x(t) = cos{(0.05 \cdot \sqrt{\frac{k}{m} - \frac{c^2}{4m^2}})} + \frac{c}{\sqrt{4km - c^2}} \cdot sen{(0.05\sqrt{\frac{k}{m} - \frac{c^2}{4m^2}})}
 $$
 
-Como queremos que o primeiro momento de equilíbrio ocorra em t = 0.05  
+Como queremos que o primeiro momento de equilíbrio ocorra em t = 0.05
 e sabemos que x = distância da posição de equilíbiro da mola (Deve ser zero em t = 0.05) podemos igualar a equação a zero e com as informações passadas no estudo de caso podemos procurar um $k$ que satisfaça essa equação.
 
 ### Achando o $k$:
