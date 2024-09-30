@@ -24,8 +24,7 @@ $$
 x(t) = cos{(0.05 \cdot \sqrt{\frac{k}{m} - \frac{c^2}{4m^2}})} + \frac{c}{\sqrt{4km - c^2}} \cdot sen{(0.05\sqrt{\frac{k}{m} - \frac{c^2}{4m^2}})}
 $$
 
-Como queremos que o primeiro momento de equilíbrio ocorra em t = 0.05
-e sabemos que x = distância da posição de equilíbiro da mola (Deve ser zero em t = 0.05) podemos igualar a equação a zero e com as informações passadas no estudo de caso podemos procurar um $k$ que satisfaça essa equação.
+Como queremos que o primeiro momento de equilíbrio ocorra em t = 0.05 e sabemos que x = distância da posição de equilíbiro da mola (Deve ser zero em t = 0.05) podemos igualar a equação a zero e com as informações passadas no estudo de caso podemos procurar um $k$ que satisfaça essa equação.
 
 ### Achando o $k$:
 Para achar o $k$ optei por utilizar o método da bisseção assim como o livro. Optei por esse método no código por sua similaridade com o método de busca binária. Para começar o método da bisseção escolhemos $k_1$ e $k_2$ tais que se $k_1$ aplicado na equação resulta em um número positivo então $k_2$ deve resultar em um negativo.  
